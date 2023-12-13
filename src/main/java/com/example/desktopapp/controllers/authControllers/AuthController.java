@@ -1,7 +1,7 @@
-package com.example.desktopapp.controllers;
+package com.example.desktopapp.controllers.authControllers;
 
 import com.example.desktopapp.models.User;
-import com.example.desktopapp.UserDAO;
+import com.example.desktopapp.DAO.UserDAO;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import com.example.desktopapp.DatabaseConnector;
@@ -42,14 +42,16 @@ public class AuthController {
             alert.setContentText("Please enter both username and password.");
             alert.showAndWait();
         } else {
-            User newUser = new User(username, password);
+            User newUser = new User();
+            newUser.setUsername(username);
+            newUser.setPassword(password);
 
             if (login(newUser)) {
                 try {
-                    FXMLLoader adminLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/admin.fxml"));
+                    FXMLLoader adminLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/adminPanel/admin.fxml"));
                     Parent adminRoot = adminLoader.load();
                     Stage stage = new Stage();
-                    stage.setTitle("AdminPanel");
+                    stage.setTitle("Admin Panel");
                     stage.setScene(new Scene(adminRoot));
 
                     Stage thisStage = (Stage) logButton.getScene().getWindow();
@@ -71,7 +73,7 @@ public class AuthController {
     @FXML
     private void handleRegisterButtonAction(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/register.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/authorization/register.fxml"));
             Parent registerRoot = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Registration");

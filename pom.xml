@@ -40,11 +40,15 @@
             <artifactId>controlsfx</artifactId>
             <version>11.1.2</version>
         </dependency>
+
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>20</version>
         </dependency>
+
+
         <dependency>
             <groupId>com.dlsc.formsfx</groupId>
             <artifactId>formsfx-core</artifactId>

@@ -15,6 +15,25 @@ module com.example.desktopapp {
 
     opens com.example.desktopapp to javafx.fxml;
     exports com.example.desktopapp;
-    exports com.example.desktopapp.controllers;
-    opens com.example.desktopapp.controllers to javafx.fxml;
+
+    exports com.example.desktopapp.controllers.adminControllers.addContollers;
+    opens com.example.desktopapp.controllers.adminControllers.addContollers to javafx.fxml;
+
+    exports com.example.desktopapp.controllers.authControllers;
+    opens com.example.desktopapp.controllers.authControllers to javafx.fxml;
+
+    exports com.example.desktopapp.controllers.adminControllers;
+    opens com.example.desktopapp.controllers.adminControllers to javafx.fxml;
+
+    exports com.example.desktopapp.DAO;
+    opens com.example.desktopapp.DAO to javafx.fxml;
+
+    exports com.example.desktopapp.controllers.adminControllers.showControllers;
+    opens com.example.desktopapp.controllers.adminControllers.showControllers to javafx.fxml;
+
+    exports com.example.desktopapp.models;
+    opens com.example.desktopapp.models to javafx.base;
+
+    exports com.example.desktopapp.controllers.adminControllers.changeControllers;
+    opens com.example.desktopapp.controllers.adminControllers.changeControllers to javafx.fxml;
 }

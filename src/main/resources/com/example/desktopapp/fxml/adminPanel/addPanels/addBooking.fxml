@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="160.0" prefWidth="265.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.desktopapp.controllers.adminControllers.addContollers.AddBookingController">
+   <Pane prefHeight="310.0" prefWidth="290.0">
+      <Label layoutX="61.0" text="Create Booking" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="20.0"/>
+         </font>
+      </Label>
+      <ComboBox fx:id="numberBox" editable="true" layoutX="55.0" layoutY="40.0" prefHeight="27.0" prefWidth="180.0"
+                promptText="Number">
+         <style>
+            -fx-border-color: #A9A9A9;
+            -fx-border-radius: 5;
+            -fx-font-size: 14.0;
+         </style>
+      </ComboBox>
+      <ComboBox fx:id="fullNameBox" editable="true" layoutX="55.0" layoutY="130.0" prefHeight="27.0"
+                prefWidth="180.0" promptText="Guest Name">
+         <style>
+            -fx-border-color: #A9A9A9;
+            -fx-border-radius: 5;
+            -fx-font-size: 14.0;
+         </style>
+      </ComboBox>
+      <TextField fx:id="countGuestField" layoutX="55.0" layoutY="86.0" prefHeight="27.0" prefWidth="180.0"
+                 promptText="Count Guest">
+         <style>
+            -fx-border-color: #A9A9A9;
+            -fx-border-radius: 5;
+            -fx-font-size: 14.0;
+         </style>
+      </TextField>
+      <DatePicker fx:id="startBookingPicker" layoutX="55.0" layoutY="174.0" prefHeight="27.0" prefWidth="180.0"
+                  promptText="Start Booking">
+         <style>
+            -fx-border-color: #A9A9A9;
+            -fx-border-radius: 5;
+            -fx-font-size: 14.0;
+         </style>
+      </DatePicker>
+      <DatePicker fx:id="endBookingPicker" layoutX="55.0" layoutY="216.0" prefHeight="27.0" prefWidth="180.0"
+                  promptText="End Booking">
+         <style>
+            -fx-border-color: #A9A9A9;
+            -fx-border-radius: 5;
+            -fx-font-size: 14.0;
+         </style>
+      </DatePicker>
+      <Button fx:id="createBooking" layoutX="158.0" layoutY="263.0" mnemonicParsing="false"
+              onAction="#handleCreateBooking" prefHeight="30.0" prefWidth="95.0" text="Create">
+         <style>
+            -fx-background-color: transparent;
+            -fx-text-fill: black;
+            -fx-border-color: #000000;
+            -fx-border-radius: 10;
+            -fx-font-size: 14.0;
+         </style>
+      </Button>
+      <Button fx:id="back" layoutX="34.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleBackButtonAction"
+              prefHeight="30.0" prefWidth="95.0" text="Back">
+         <style>
+            -fx-background-color: transparent;
+            -fx-text-fill: black;
+            -fx-border-color: #000000;
+            -fx-border-radius: 10;
+            -fx-font-size: 14.0;
+         </style>
+      </Button>
+   </Pane>
+</AnchorPane>

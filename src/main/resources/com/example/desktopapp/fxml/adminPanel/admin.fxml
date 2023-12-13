@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="193.0" prefWidth="239.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.desktopapp.controllers.adminControllers.AdminController">
+    <Pane prefHeight="201.0" prefWidth="239.0">
+        <Label layoutX="51.0" layoutY="7.0" text="Admin Panel" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Black" size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="showRooms" layoutX="58.0" layoutY="52.0" onAction="#handleShowRoomsButtonAction"
+                prefHeight="31.0" prefWidth="124.0" text="Rooms">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+        <Button fx:id="showUsers" layoutX="58.0" layoutY="141.0" onAction="#handleShowUsersButtonAction"
+                prefHeight="31.0" prefWidth="124.0" text="Users">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+        <Button fx:id="showBooking" layoutX="58.0" layoutY="95.0" onAction="#handleShowBookingButtonAction"
+                prefHeight="31.0" prefWidth="124.0" text="Booking">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+    </Pane>
+</AnchorPane>

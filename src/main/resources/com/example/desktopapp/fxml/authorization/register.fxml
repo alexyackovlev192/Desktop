@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.desktopapp.controllers.authControllers.RegisterController">
+    <Pane prefHeight="272.0" prefWidth="300.0">
+        <Label layoutX="83.0" text="Registration" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Black" size="20.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" layoutX="60.0" layoutY="40.0" prefHeight="27.0" prefWidth="180.0"
+                   promptText="Login">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </TextField>
+        <PasswordField fx:id="passwordField" layoutX="60.0" layoutY="83.0" prefHeight="27.0" prefWidth="180.0"
+                       promptText="Password">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </PasswordField>
+        <TextField fx:id="emailField" layoutX="60.0" layoutY="131.0" prefHeight="27.0" prefWidth="180.0"
+                   promptText="Email">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </TextField>
+        <TextField fx:id="fullnameField" layoutX="60.0" layoutY="175.0" prefHeight="27.0" prefWidth="180.0"
+                   promptText="Full Name">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </TextField>
+        <Button fx:id="regButton" cancelButton="true" layoutX="50.0" layoutY="226.0" mnemonicParsing="false"
+                onAction="#handleLoginButtonAction" prefHeight="27.0" prefWidth="90.0" text="Login">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+        <Button fx:id="logButton" cancelButton="true" layoutX="160.0" layoutY="226.0" mnemonicParsing="false"
+                onAction="#handleRegisterButtonAction" prefHeight="30.0" prefWidth="90.0" text="Register">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+    </Pane>
+</AnchorPane>

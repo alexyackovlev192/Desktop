@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="422.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktopapp.controllers.adminControllers.showControllers.showUsersController">
+    <TableView fx:id="userTableView" prefHeight="358.0" prefWidth="595.0">
+        <columns>
+            <TableColumn prefWidth="36.0" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="User_ID" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="153.0" text="Login">
+                <cellValueFactory>
+                    <PropertyValueFactory property="username" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="167.0" text="Email">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="254.0" text="Full Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="full_Name" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button fx:id="back" layoutX="236.0" layoutY="374.0" onAction="#handleBackButtonAction" prefHeight="30.0" prefWidth="124.0" text="Back" textAlignment="CENTER">
+        <style>
+            -fx-background-color: transparent;
+            -fx-text-fill: black;
+            -fx-border-color: #000000;
+            -fx-border-radius: 10;
+            -fx-font-size: 14.0;
+        </style>
+    </Button>
+</AnchorPane>

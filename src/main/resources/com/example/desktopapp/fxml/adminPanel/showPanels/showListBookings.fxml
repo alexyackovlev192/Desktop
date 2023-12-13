@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="443.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktopapp.controllers.adminControllers.showControllers.showBookingsController">
+    <TableView fx:id="bookingTableView" prefHeight="376.0" prefWidth="747.0" onMouseClicked="#handleTableClick">
+        <columns>
+            <TableColumn prefWidth="36.0" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="booking_ID" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="85.0" text="Number">
+                <cellValueFactory>
+                    <PropertyValueFactory property="number" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="204.00000762939453" text="Guest name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="full_Name" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="123.4000244140625" text="Count Guest">
+                <cellValueFactory>
+                    <PropertyValueFactory property="count_Guest" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="162.99996948242188" text="Check-in date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="start_Date" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+            <TableColumn prefWidth="132.8000366210938" text="Check-out date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="end_Date" />
+                </cellValueFactory>
+                <style>
+                    -fx-font-size: 14.0;
+                    -fx-alignment: center;
+                </style>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button fx:id="addBooking" layoutX="312.0" layoutY="396.0" onAction="#handleAddBookingButtonAction" prefHeight="30.0" prefWidth="124.0" text="Add Booking" textAlignment="CENTER">
+        <style>
+            -fx-background-color: transparent;
+            -fx-text-fill: black;
+            -fx-border-color: #000000;
+            -fx-border-radius: 10;
+            -fx-font-size: 14.0;
+        </style>
+    </Button>
+    <Button fx:id="back" layoutX="112.0" layoutY="396.0" onAction="#handleBackButtonAction" prefHeight="30.0" prefWidth="124.0" text="Back" textAlignment="CENTER">
+        <style>
+            -fx-background-color: transparent;
+            -fx-text-fill: black;
+            -fx-border-color: #000000;
+            -fx-border-radius: 10;
+            -fx-font-size: 14.0;
+        </style>
+    </Button>
+</AnchorPane>

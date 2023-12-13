@@ -1,0 +1,34 @@
+-- Создание базы данных
+CREATE DATABASE IF NOT EXISTS db_hotel;
+
+-- Использование созданной базы данных
+USE db_hotel;
+
+-- Создание таблицы "Users"
+CREATE TABLE IF NOT EXISTS Users (
+    User_ID INT AUTO_INCREMENT PRIMARY KEY,
+    UserName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Full_Name VARCHAR(255) NOT NULL
+);
+
+-- Создание таблицы "Rooms"
+CREATE TABLE IF NOT EXISTS Rooms (
+    Room_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Number INT NOT NULL,
+    Class_Room VARCHAR(255) NOT NULL,
+    Capacity INT NOT NULL
+);
+
+-- Создание таблицы "Bookings"
+CREATE TABLE IF NOT EXISTS Bookings (
+    Booking_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Room_ID INT NOT NULL,
+    User_ID INT NOT NULL,
+    Count_Guest INT NOT NULL,
+    Start_Date DATE NOT NULL,
+    End_Date DATE NOT NULL,
+    FOREIGN KEY (Room_ID) REFERENCES Rooms(Room_ID),
+    FOREIGN KEY (User_ID) REFERENCES Users(User_ID)
+);

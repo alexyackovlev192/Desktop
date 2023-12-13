@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="202.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.desktopapp.controllers.adminControllers.addContollers.AddRoomController">
+    <Pane prefHeight="218.0" prefWidth="290.0">
+        <Label layoutX="89.0" text="Add Room" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Black" size="20.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="numberField" layoutX="55.0" layoutY="37.0" prefHeight="27.0" prefWidth="180.0"
+                   promptText="Number">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </TextField>
+        <TextField fx:id="capacityField" layoutX="55.0" layoutY="78.0" prefHeight="27.0" prefWidth="180.0"
+                   promptText="Сapacity">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+        </TextField>
+        <ComboBox fx:id="classBox" editable="true" layoutX="55.0" layoutY="119.0" prefHeight="27.0"
+                  prefWidth="180.0" promptText="Class" value="Economy">
+            <style>
+                -fx-border-color: #A9A9A9;
+                -fx-border-radius: 5;
+                -fx-font-size: 14.0;
+            </style>
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Economy"/>
+                    <String fx:value="Standard"/>
+                    <String fx:value="Standard +"/>
+                    <String fx:value="Junior suite"/>
+                    <String fx:value="Suite"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="createRoom" layoutX="153.0" layoutY="166.0" mnemonicParsing="false"
+                onAction="#handleCreateRoom" prefHeight="30.0" prefWidth="95.0" text="Create">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+        <Button fx:id="back" layoutX="42.0" layoutY="166.0" mnemonicParsing="false"
+                onAction="#handleBackButtonAction" prefHeight="30.0" prefWidth="95.0" text="Back">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+    </Pane>
+</AnchorPane>

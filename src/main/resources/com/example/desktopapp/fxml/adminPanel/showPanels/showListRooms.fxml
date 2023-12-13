@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktopapp.controllers.adminControllers.showControllers.showRoomsController">
+    <Pane prefHeight="461.0" prefWidth="611.0">
+        <TableView fx:id="roomTableView" prefHeight="393.0" prefWidth="611.0" onMouseClicked="#handleTableClick">
+            <style>
+                -fx-font-size: 14.0;
+                -fx-text-alignment: center;
+            </style>
+            <columns>
+                <TableColumn prefWidth="45.0" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="Room_ID"/>
+                    </cellValueFactory>
+                    <style>
+                        -fx-font-size: 14.0;
+                        -fx-alignment: center;
+                    </style>
+                </TableColumn>
+                <TableColumn prefWidth="185.0" text="Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="number"/>
+                    </cellValueFactory>
+                    <style>
+                        -fx-font-size: 14.0;
+                        -fx-alignment: center;
+                    </style>
+                </TableColumn>
+                <TableColumn prefWidth="230.0" text="Class">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="class_Room"/>
+                    </cellValueFactory>
+                    <style>
+                        -fx-font-size: 14.0;
+                        -fx-alignment: center;
+                    </style>
+                </TableColumn>
+                <TableColumn prefWidth="150.0" text="Capacity">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="capacity"/>
+                    </cellValueFactory>
+                    <style>
+                        -fx-font-size: 14.0;
+                        -fx-alignment: center;
+                    </style>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="addRoom" layoutX="244.0" layoutY="416.0" onAction="#handleAddRoomButtonAction" prefHeight="30.0"
+                prefWidth="124.0" text="Add Room" textAlignment="CENTER">
+            <style>
+              -fx-background-color: transparent;
+              -fx-text-fill: black;
+              -fx-border-color: #000000;
+              -fx-border-radius: 10;
+              -fx-font-size: 14.0;
+            </style>
+        </Button>
+        <Button fx:id="back" layoutX="57.0" layoutY="416.0" onAction="#handleBackButtonAction" prefHeight="30.0"
+                prefWidth="124.0" text="Back" textAlignment="CENTER">
+            <style>
+                -fx-background-color: transparent;
+                -fx-text-fill: black;
+                -fx-border-color: #000000;
+                -fx-border-radius: 10;
+                -fx-font-size: 14.0;
+            </style>
+        </Button>
+    </Pane>
+</AnchorPane>

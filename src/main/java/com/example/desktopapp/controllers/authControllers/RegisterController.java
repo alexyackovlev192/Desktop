@@ -1,8 +1,8 @@
-package com.example.desktopapp.controllers;
+package com.example.desktopapp.controllers.authControllers;
 
 import com.example.desktopapp.DatabaseConnector;
 import com.example.desktopapp.models.User;
-import com.example.desktopapp.UserDAO;
+import com.example.desktopapp.DAO.UserDAO;
 
 import javafx.fxml.*;
 import javafx.event.*;
@@ -22,7 +22,7 @@ public class RegisterController {
         this.userDao = new UserDAO(databaseConnector.getConnection());
     }
     public boolean register(User user) {
-        return userDao.registerUser(user.getUsername(), user.getPassword(), user.getEmail());
+        return userDao.registerUser(user.getUsername(), user.getPassword(), user.getEmail(), user.getFull_Name());
     }
     @FXML
     private TextField usernameField;
@@ -30,14 +30,18 @@ public class RegisterController {
     private PasswordField passwordField;
     @FXML
     private TextField emailField;
+    @FXML
+    private TextField fullnameField;
+    @FXML
     public Button logButton;
+    @FXML
     public Button regButton;
 
     @FXML
     private void handleLoginButtonAction(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/auth.fxml"));
-            Parent registerRoot = fxmlLoader.load();
+            FXMLLoader authLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/authorization/auth.fxml"));
+            Parent registerRoot = authLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Authorization");
             stage.setScene(new Scene(registerRoot));
@@ -54,8 +58,9 @@ public class RegisterController {
         String username = usernameField.getText();
         String password = passwordField.getText();
         String email = emailField.getText();
+        String fullName = fullnameField.getText();
 
-        if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
+        if (username.isEmpty() || password.isEmpty() || email.isEmpty() || fullName.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Registration Error");
@@ -74,10 +79,12 @@ public class RegisterController {
             alert.setContentText("Invalid email format. Please enter a valid email address.");
             alert.showAndWait();
         } else {
-            User newUser = new User(username, password, email);
+            User newUser = new User();
+            newUser.setEmail(email);
+            newUser.setFull_Name(fullName);
             if (register(newUser)) {
                 try {
-                    FXMLLoader authLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/auth.fxml"));
+                    FXMLLoader authLoader = new FXMLLoader(getClass().getResource("/com/example/desktopapp/fxml/authorization/auth.fxml"));
                     Parent authRoot = authLoader.load();
                     Stage stage = new Stage();
                     stage.setTitle("Authorization");
@@ -99,8 +106,8 @@ public class RegisterController {
         }
     }
 
+    // Проверка на корректный формат email
     private boolean isValidEmail(String email) {
-        // Проверка на корректный формат email
         return email.matches("^[\\w-_.+]*[\\w-_.]@([\\w]+\\.)+[\\w]+[\\w]$");
     }
 }
